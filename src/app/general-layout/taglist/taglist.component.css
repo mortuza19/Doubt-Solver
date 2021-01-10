@@ -1,0 +1,45 @@
+.taglist-section {
+    margin: 8px 8px;
+}
+
+.create-topic-button button {
+    width: 80%;
+    margin: auto;
+    display: block;
+    background-color: #337ab7;
+    color: white;
+}
+
+.tag-list {
+    width: 80%;
+    margin: auto;
+    margin-top: 24px;
+}
+
+header {
+    font-size: 20px;
+    font-weight: 500;
+    color: #bcbcbc;
+    margin-top: 16px;
+    padding-bottom: 4px;
+    border-bottom: 2px solid #bcbcbc;
+}
+
+ul {
+    list-style: none;
+    padding-left: 16px;
+}
+
+li {
+    height: 36px;
+    padding-left: 12px;
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+li:hover {
+    border: 1px solid #eee;
+    box-shadow: 2px 3px 5px #ccc;
+}

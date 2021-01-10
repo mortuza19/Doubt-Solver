@@ -1,0 +1,23 @@
+<section class="list-container">
+    <div class="lists" *ngFor="let topic of topicLists">
+        <div class="header-section">
+            <header>{{topic.subject}}</header>
+            <div class="comment-counter">
+                <span class="material-icons comment-icon">
+                    mode_comment
+                </span>
+                <span>{{topic.commentCount}}</span>
+            </div>
+        </div>
+        <div class="topic-desc">{{topic.content}}</div>
+        <div class="user-details">
+            <div class="user">
+                <span class="material-icons user-icon">account_circle</span>
+                <span>{{topic.creator.name}}</span>
+            </div>
+            <div class="category-list">
+                <div class="category">{{topic.categoryId}}</div>
+            </div>
+        </div>
+    </div>
+</section>

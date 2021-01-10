@@ -1,0 +1,104 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.sign-in-container {
+    width: 500px;
+    height: 500px;
+}
+
+.heading {
+    color: #337ab7;
+    font-size: 2rem;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+.social-media-icon {
+    width: 30%;
+    display: flex;
+    justify-content: space-around;
+    margin: auto;
+    border-top: 4px solid #337ab7;
+    padding-top: 6%;
+}
+
+.fb-icon {
+    background-image: url('../../../assets/SigninAssets/fb-icon.png');
+    width: 50px;
+    height: 50px;
+    background-position: center;
+    background-size: 220%;
+    background-repeat: no-repeat;
+}
+
+.gmail-icon {
+    background-image: url('../../../assets/SigninAssets/google-logo.png');
+    width: 50px;
+    height: 50px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.description {
+    margin: 16px 0px;
+    color: #9b9b9b;
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+.email-container ,
+.pwd-container {
+    width: 70%;
+    margin: auto;
+    position: relative;
+}
+
+.icons {
+    position: absolute;
+    top: 24px;
+    left: 16px;
+    color: #e2e2e2;
+}
+
+#email, #pwd {
+    height: 40px;
+    border: 2px solid #e2e2e2;
+    border-radius: 8px;
+    margin: 8px 0px;
+    padding: 4px;
+    width: 100%;
+    padding-left: 42px;
+    outline: none;
+    font-size: 16px;
+}
+
+.signin-option {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px;
+    color: #666666;
+    width: 80%;
+    margin-left: 12%;
+}
+
+.signin-button {
+    width: 50%;
+    max-width: 300px;
+    height: 48px;
+    border: 16px;
+    background-color: #337ab7;
+    color: white;
+    border-radius: 40px;
+    margin: 24px auto;
+    display: block;
+    font-size: 1.3rem;
+    font-weight: 600;
+    outline: none;
+    cursor: pointer;
+}

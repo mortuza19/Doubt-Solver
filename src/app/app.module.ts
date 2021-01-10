@@ -1,16 +1,43 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { UserContainerComponent } from './user-container/user-container.component';
+import { SignInComponent } from './user-container/sign-in/sign-in.component';
+import { IntroComponent } from './user-container/intro/intro.component';
+import { GeneralLayoutComponent } from './general-layout/general-layout.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatAutocompleteModule, MatButtonModule, MatSnackBarModule } from '@angular/material';
+import { TaglistComponent } from './general-layout/taglist/taglist.component';
+import { SearchBarComponent } from './general-layout/search-bar/search-bar.component';
+import { TopicListsComponent } from './topic-lists/topic-lists.component';
+import { QuestionDetailsComponent } from './question-details/question-details.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    UserContainerComponent,
+    SignInComponent,
+    IntroComponent,
+    GeneralLayoutComponent,
+    TaglistComponent,
+    SearchBarComponent,
+    TopicListsComponent,
+    QuestionDetailsComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+    BrowserAnimationsModule,
+    MatSnackBarModule,
+    MatAutocompleteModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

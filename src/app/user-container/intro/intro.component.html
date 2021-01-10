@@ -1,0 +1,25 @@
+<div class="intro-container">
+    <div class="custom-bg" #custombg>
+        <div class="side-image ovalcopy7" style="background-image: url('../../../assets/SigninAssets/OvalCopy7.png');"></div>
+        <div class="side-image lefttablate" style="background-image: url('../../../assets/SigninAssets/Lefttablate.png');"></div>
+        <div class="side-image circle" style="background-image: url('../../../assets/SigninAssets/Circle.png');"></div>
+        <div class="side-image ovalcopy" style="background-image: url('../../../assets/SigninAssets/OvalCopy.png');"></div>
+        <div class="side-image tablate" style="background-image: url('../../../assets/SigninAssets/tablate.png');"></div>
+        <div class="side-image ovalcopy5" style="background-image: url('../../../assets/SigninAssets/OvalCopy5.png');"></div>
+        <div class="side-image ovalcopy2" style="background-image: url('../../../assets/SigninAssets/OvalCopy2.png');"></div>
+        <div class="side-image ovalcopy6" style="background-image: url('../../../assets/SigninAssets/OvalCopy6.png');"></div>
+    </div>
+    <div class="detail-section">
+        <div class="company-logo">
+            <div class="company-icon" #companyLogo></div>
+        </div>
+        <div class="account-info" #accountInfo>
+            {{accountMessage}}
+        </div>
+        <div class="empty-dash"></div>
+        <div class="basic-info" #greetingsInfo>
+            {{greetings}}
+        </div>
+        <button #button (click)="changeToSignIn()">{{buttonName}}</button>
+    </div>
+</div>

@@ -1,0 +1,37 @@
+<div class="container">
+    <div class="sign-in-container">
+        <header class="heading">
+            Hello friend!
+        </header>
+        <div class="social-media-icon">
+            <div class="fb-icon"></div>
+            <div class="gmail-icon"></div>
+        </div>
+        <div class="description">
+            or use your email address
+        </div>
+        <div class="email-container" *ngIf="buttonName === 'Sign Up'">
+            <i class="fa fa-envelope icons"></i>
+            <input type="text" name="email" [(ngModel)]="userEmail" id="email" placeholder="Email">
+        </div>
+        <div class="email-container">
+            <i class="fa fa-envelope icons"></i>
+            <input type="text" name="email" [(ngModel)]="userName" id="email" placeholder="User name">
+        </div>
+        <div class="pwd-container">
+            <i class="fa fa-eye icons"></i>
+            <input type="password" name="pwd" [(ngModel)]="pwd" id="pwd" placeholder="Password">
+        </div>
+        <div class="signin-option">
+            <div class="remember-me-checkbox">
+                <input type="checkbox" name="remember-me" id="remember-me"> Remember me
+            </div>
+            <div class="forgot-password">
+                Forgot password?
+            </div>
+        </div>
+        <div class="signin-button-container">
+            <button class="signin-button" (click)="signin()">{{buttonName}}</button>
+        </div>
+    </div>
+</div>

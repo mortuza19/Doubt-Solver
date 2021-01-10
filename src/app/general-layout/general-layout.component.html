@@ -1,0 +1,20 @@
+<header class="page-header">
+    <section class="logo-section"></section>
+    <section class="user-section">
+        <div class="logout">Logout</div>
+        <div class="user-icon">
+            <i class="fa fa-user" aria-hidden="true"></i>
+        </div>
+    </section>
+</header>
+<section class="main-section">
+    <app-search-bar></app-search-bar>
+    <main class="content-section">
+        <div class="question-section">
+            <router-outlet></router-outlet>
+        </div>
+        <div class="tag-section">
+            <app-taglist></app-taglist>
+        </div>
+    </main>
+</section>

@@ -1,0 +1,8 @@
+<div class="container">
+    <div class="sign-in-container" [ngClass]="{'signup-class': !isSignUp}">
+      <app-sign-in></app-sign-in>
+    </div>
+    <div class="intro-container" [ngClass]="{'signin-class': !isSignUp}">
+      <app-intro></app-intro>
+    </div>
+  </div>

@@ -1,0 +1,62 @@
+.page-header {
+    height: 60px;
+    padding: 4px 16px;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    align-items: center;
+    background-color: #337ab7;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+
+.logo-section {
+    background-image: url('../../assets/SigninAssets/placeholder.com-logo1.png');
+    width: 280px;
+    height: 50px;
+    background-repeat: no-repeat;
+    opacity: 1;
+    transition: 0.5s;
+    background-size: cover;
+}
+
+.user-section {
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.logout {
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.logout:hover {
+    text-decoration: underline;
+}
+
+.user-icon {
+    font-size: 36px;
+    margin-left: 24px;
+}
+
+.main-section {
+    padding: 8px 16px 0px 16px;
+}
+
+.content-section {
+    display: flex;
+    margin: 16px 0px;
+}
+
+.question-section {
+    width: 75%;
+}
+
+.tag-section {
+    width: 25%;
+    background-color: white;
+    border-radius: 8px;
+    height: fit-content;
+}
