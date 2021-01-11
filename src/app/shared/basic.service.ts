@@ -30,6 +30,9 @@ export class BasicService {
     'IOC'
   ];
 
+  tagSelected: Subject<string> = new Subject<string>();
+  newTopic: Subject<TopicModel> = new Subject<TopicModel>();
+
   topicList: TopicModel[] = [];
   
   constructor(

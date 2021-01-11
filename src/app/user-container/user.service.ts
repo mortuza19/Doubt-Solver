@@ -27,6 +27,7 @@ export class UserService {
       const element = this.userList[index];
       if (element.name.toLowerCase() === userData.username.toLowerCase() && element.pwd === userData.pwd) {
         sessionStorage.setItem('userName', element.name);
+        sessionStorage.setItem('userId', element.id);
         this.router.navigate(['../home'],{relativeTo: this.route});
         return;
       }

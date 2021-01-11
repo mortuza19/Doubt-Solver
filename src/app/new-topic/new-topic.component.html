@@ -1,0 +1,22 @@
+<section class="new-topic-popup">
+    <div class="subject-control">
+        <label for="subject">Subject</label>
+        <input type="text" [(ngModel)]="subject" name="subject" id="subject">
+    </div>
+    <div class="content-control">
+        <label for="content">Content</label>
+        <textarea [(ngModel)]="content" name="content" id="content" cols="30" rows="10"></textarea>
+    </div>
+    <div class="category-control">
+        <label>Category</label>
+        <mat-select id="category" [(ngModel)]="category">
+            <mat-option *ngFor="let tag of categoryList" [value]="tag">
+                {{tag}}
+            </mat-option>
+        </mat-select>
+    </div>
+    <div class="button-container">
+        <button class="save-button" (click)="addNewTopic()" [disabled]="!content || !subject || !category" mat-raised-button>Save</button>
+        <button class="cancel-button" (click)="closePopup()" mat-raised-button color="warn">Cancel</button>
+    </div>
+</section>

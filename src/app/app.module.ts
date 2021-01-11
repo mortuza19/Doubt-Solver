@@ -10,11 +10,12 @@ import { SignInComponent } from './user-container/sign-in/sign-in.component';
 import { IntroComponent } from './user-container/intro/intro.component';
 import { GeneralLayoutComponent } from './general-layout/general-layout.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatAutocompleteModule, MatButtonModule, MatSnackBarModule } from '@angular/material';
+import { MatAutocompleteModule, MatButtonModule, MatDialogModule, MatFormFieldModule, MatSelectModule, MatSnackBarModule } from '@angular/material';
 import { TaglistComponent } from './general-layout/taglist/taglist.component';
 import { SearchBarComponent } from './general-layout/search-bar/search-bar.component';
 import { TopicListsComponent } from './topic-lists/topic-lists.component';
 import { QuestionDetailsComponent } from './question-details/question-details.component';
+import { NewTopicComponent } from './new-topic/new-topic.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { QuestionDetailsComponent } from './question-details/question-details.co
     SearchBarComponent,
     TopicListsComponent,
     QuestionDetailsComponent,
+    NewTopicComponent,
   ],
   imports: [
     BrowserModule,
@@ -37,9 +39,13 @@ import { QuestionDetailsComponent } from './question-details/question-details.co
     BrowserAnimationsModule,
     MatSnackBarModule,
     MatAutocompleteModule,
-    MatButtonModule
+    MatButtonModule,
+    MatFormFieldModule,
+    MatSelectModule,
+    MatDialogModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [NewTopicComponent]
 })
 export class AppModule { }

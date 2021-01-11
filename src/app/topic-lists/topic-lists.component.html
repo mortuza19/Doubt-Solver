@@ -9,7 +9,7 @@
                 <span>{{topic.commentCount}}</span>
             </div>
         </div>
-        <div class="topic-desc">{{topic.content}}</div>
+        <div class="topic-desc" [innerHTML]="topic.content"></div>
         <div class="user-details">
             <div class="user">
                 <span class="material-icons user-icon">account_circle</span>

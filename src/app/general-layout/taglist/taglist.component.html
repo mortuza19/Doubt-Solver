@@ -1,11 +1,11 @@
 <section class="taglist-section">
     <div class="create-topic-button">
-        <button mat-raised-button>Create Thread</button>
+        <button mat-raised-button (click)="createNewTopic()">Create Thread</button>
     </div>
     <div class="tag-list">
         <header>Tags</header>
         <ul>
-            <li *ngFor="let tag of tagList">{{tag}}</li>
+            <li *ngFor="let tag of tagList" (click)="tagChosen(tag)" [class.selected]="tag.selected">{{tag.tagName}}</li>
         </ul>
     </div>
 </section>
