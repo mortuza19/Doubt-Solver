@@ -22,7 +22,7 @@
     </div>
     <div class="comment-section" *ngIf="questionDetail">
         <header class="comment-header">Comments</header>
-        <div class="comment-list" *ngFor="let comment of questionDetail.comments">
+        <div class="comment-list" *ngFor="let comment of questionDetail.comments; let i = index">
             <div class="single-comment">
                 <div class="commentator-details">
                     <span class="material-icons user-icon">account_circle</span>
@@ -32,7 +32,7 @@
                 <div [innerHTML]="comment.content"></div>
             </div>
             <div class="action-links">
-                <div class="comment-list" *ngFor="let comment of questionDetail.comments.replies">
+                <div class="comment-list reply-list" *ngFor="let comment of comment.replies">
                     <div class="commentator-details">
                         <span class="material-icons user-icon">account_circle</span>
                         <span>{{comment.creator.name}}</span>
@@ -46,7 +46,7 @@
                         <span>{{loginUser}}</span>
                         <span>{{ date | date}}</span>
                     </div>
-                    <input class="search-panel" type="text" placeholder="Add a new reply">
+                    <input class="search-panel" [(ngModel)]="replyList[i]" (keyup.enter)="addReply(i)" type="text" placeholder="Add a new reply">
                 </div>
             </div>
         </div>
@@ -57,6 +57,6 @@
             <span>{{loginUser}}</span>
             <span>{{ date | date}}</span>
         </div>
-        <input class="search-panel" type="text" placeholder="Add a new comment">
+        <input class="search-panel" [(ngModel)]="newComment" (keyup.enter)="addComment()" type="text" placeholder="Add a new comment">
     </div>
 </section>

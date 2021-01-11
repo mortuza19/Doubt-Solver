@@ -133,3 +133,11 @@
     color: #bcbcbc;
     cursor: pointer;
 }
+
+.reply-list {
+    padding: 16px 24px;
+}
+
+.reply-list:first-of-type {
+    margin-top: 16px;
+}
