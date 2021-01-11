@@ -4,6 +4,7 @@
     padding: 0px 16px;
     box-sizing: border-box;
     display: flex;
+    overflow: hidden;
 }
 
 .sign-in-container {
@@ -16,10 +17,10 @@
 }
 
 .intro-container {
-    width: 38%;
+    width: 39%;
     height: 100%;
     position: absolute;
-    left: 58%;
+    left: 58.2%;
     transition: 0.5s;
     transition-delay: 0.5s;
 }

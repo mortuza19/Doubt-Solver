@@ -1,7 +1,7 @@
 <section class="list-container">
     <div class="lists" *ngFor="let topic of topicLists">
         <div class="header-section">
-            <header>{{topic.subject}}</header>
+            <header [routerLink]="['../topic',topic.id]">{{topic.subject}}</header>
             <div class="comment-counter">
                 <span class="material-icons comment-icon">
                     mode_comment

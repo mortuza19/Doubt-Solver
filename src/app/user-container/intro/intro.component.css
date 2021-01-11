@@ -29,13 +29,13 @@
 }
 
 .company-icon {
-    background-image: url('../../../assets/SigninAssets/placeholder.com-logo1.png');
+    background-image: url('../../../assets/SigninAssets/placeholder.png');
     width: 280px;
-    height: 50px;
+    height: 59px;
     background-repeat: no-repeat;
     opacity: 1;
     transition: 0.5s;
-    background-size: cover;
+    background-size: contain;
 }
 
 

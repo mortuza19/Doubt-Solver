@@ -1,0 +1,135 @@
+.question-detail-container {
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.back-button {
+    font-size: 40px;
+    cursor: pointer;
+    outline: none;
+    background-color: white;
+    padding-left: 16px;
+    padding-top: 8px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+}
+
+.back-to-home {
+    font-size: 14px;
+    padding-top: 8px;
+    margin-left: 8px;
+    outline: none;
+}
+
+.back-to-home:hover {
+    text-decoration: underline;
+}
+
+.question-section {
+    padding: 24px;
+    box-sizing: border-box;
+    background-color: white;
+    border-radius: 4px;
+}
+
+.subject {
+    font-size: 30px;
+    font-weight: 500;
+    padding: 16px;
+    border-bottom: 2px solid #ccc;
+    padding-top: 0px;
+}
+
+.content {
+    padding: 16px;
+}
+
+.user {
+    display: flex;
+    align-items: center;
+    width: 30%;
+}
+
+.user-details {
+    display: flex;
+    align-items: center;
+    padding: 16px;
+    border-bottom: 2px solid #ccc;
+}
+
+.user-icon {
+    font-size: 36px;
+    margin-right: 8px;
+    color: #5d636a;
+}
+
+.user-icon + span {
+    color: #18bc9c;
+    margin-right: 8px;
+    padding: 0px 8px;
+    border-right: 1px solid black;
+}
+
+.comment-header {
+    padding: 0px 16px;
+    margin-bottom: 16px;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.comment-section {
+    background-color: white;
+    padding: 24px;
+    padding-top: 0px;
+}
+
+.comment-list {
+    padding: 16px;
+    border-top: 2px solid #ccc;
+}
+
+.add-new-comment {
+    padding: 8px 24px 40px 24px;
+    background-color: white;
+}
+
+.search-panel {
+    width: 95%;
+    height: 40px;
+    border: 1px solid #bcbcbc;
+    border-radius: 50px;
+    padding: 4px 12px;
+    margin: auto;
+    display: block;
+    margin-top: 1%;
+    outline: none;
+    font-size: 16px;
+}
+
+.comment-list:last-of-type {
+    border-bottom: 2px solid #ccc;
+}
+
+.commentator-details {
+    display: flex;
+    align-items: center;
+    margin-bottom: 4px;
+}
+
+.user {
+    display: flex;
+    align-items: center;
+}
+
+.like-button, .view-button {
+    margin-left: 5%;
+    display: flex;
+    align-items: center;
+}
+
+.icon {
+    margin-right: 8px;
+    color: #bcbcbc;
+    cursor: pointer;
+}

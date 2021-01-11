@@ -10,7 +10,6 @@ import { TopicModel } from './data-model';
 })
 export class BasicService {
 
-  positionChange  = new Subject<string>();
   tagList : string[] = [
     'All',
     'Architecture',
@@ -30,6 +29,7 @@ export class BasicService {
     'IOC'
   ];
 
+  positionChange  = new Subject<string>();
   tagSelected: Subject<string> = new Subject<string>();
   newTopic: Subject<TopicModel> = new Subject<TopicModel>();
   searchText: Subject<string> = new Subject<string>();
@@ -45,6 +45,10 @@ export class BasicService {
 
   getTopicList() {
     return this.http.get('./assets/json/topics.json');
+  }
+
+  getQuestionDetail() {
+    return this.http.get('./assets/json/topic.json');
   }
 
   openSnackBar(message: string) {

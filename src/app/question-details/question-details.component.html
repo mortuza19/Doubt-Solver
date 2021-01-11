@@ -1,1 +1,62 @@
-<p>question-details works!</p>
+<section class="question-detail-container">
+    <div class="back-button">
+        <span class="material-icons back-button" [routerLink]="['/home/topics']">keyboard_backspace</span>
+        <span class="back-to-home" [routerLink]="['/home/topics']">Back to home screen</span>
+    </div>
+    <div class="question-section" *ngIf="questionDetail">
+        <div class="subject">{{questionDetail.subject}}</div>
+        <div class="content" [innerHTML]="questionDetail.content"></div>
+        <div class="user-details">
+            <span class="material-icons user-icon">account_circle</span>
+            <span>{{questionDetail.creator.name}}</span>
+            <span>{{questionDetail.createdTime | date}}</span>
+            <div class="like-button">
+                <span class="material-icons icon">thumb_up</span>
+                <span>{{questionDetail.likeCount}}</span>
+            </div>
+            <div class="view-button">
+                <i class="fa fa-eye icons icon"></i>
+                <span>{{questionDetail.viewCount}}</span>
+            </div>
+        </div>
+    </div>
+    <div class="comment-section" *ngIf="questionDetail">
+        <header class="comment-header">Comments</header>
+        <div class="comment-list" *ngFor="let comment of questionDetail.comments">
+            <div class="single-comment">
+                <div class="commentator-details">
+                    <span class="material-icons user-icon">account_circle</span>
+                    <span>{{comment.creator.name}}</span>
+                    <span>{{comment.createdTime | date}}</span>
+                </div>
+                <div [innerHTML]="comment.content"></div>
+            </div>
+            <div class="action-links">
+                <div class="comment-list" *ngFor="let comment of questionDetail.comments.replies">
+                    <div class="commentator-details">
+                        <span class="material-icons user-icon">account_circle</span>
+                        <span>{{comment.creator.name}}</span>
+                        <span>{{comment.createdTime | date}}</span>
+                    </div>
+                    <div [innerHTML]="comment.content"></div>
+                </div>
+                <div class="add-new-comment" style="margin-top: 16px;">
+                    <div class="user">
+                        <span class="material-icons user-icon">account_circle</span>
+                        <span>{{loginUser}}</span>
+                        <span>{{ date | date}}</span>
+                    </div>
+                    <input class="search-panel" type="text" placeholder="Add a new reply">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="add-new-comment">
+        <div class="user">
+            <span class="material-icons user-icon">account_circle</span>
+            <span>{{loginUser}}</span>
+            <span>{{ date | date}}</span>
+        </div>
+        <input class="search-panel" type="text" placeholder="Add a new comment">
+    </div>
+</section>
