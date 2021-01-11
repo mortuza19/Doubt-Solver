@@ -5,6 +5,13 @@ This project is a small application of community forum. The application is creat
 
 The project mainly focuses on the UI part. all the data generated are from the given JSON file with the assignment.
 
+## Hosted URL
+
+https://mortuza19.github.io/Doubt-Solver
+
+username - Sharanya
+password - pwd123
+
 ## Git branch
 
 The code is in "master" branch.
