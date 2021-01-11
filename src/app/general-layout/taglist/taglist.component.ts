@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material';
+import { Subscription } from 'rxjs';
 import { NewTopicComponent } from 'src/app/new-topic/new-topic.component';
 import { BasicService } from 'src/app/shared/basic.service';
 
@@ -8,16 +9,22 @@ import { BasicService } from 'src/app/shared/basic.service';
   templateUrl: './taglist.component.html',
   styleUrls: ['./taglist.component.css']
 })
-export class TaglistComponent implements OnInit {
+export class TaglistComponent implements OnInit, OnDestroy {
 
   constructor(private basicService: BasicService, public dialog: MatDialog) { }
 
+  searchTextSubscription: Subscription;
   tagList: any[] = [];
   ngOnInit() {
     this.basicService.tagList.forEach(tag => {
       this.tagList.push(
         {tagName: tag, selected: 0}
       );
+    });
+    this.searchTextSubscription = this.basicService.searchText.subscribe(data => {
+      this.tagList.forEach(tag => {
+        tag.selected = 0;
+      });
     })
   }
 
@@ -37,6 +44,10 @@ export class TaglistComponent implements OnInit {
 
   createNewTopic() {
     this.dialog.open(NewTopicComponent);
+  }
+
+  ngOnDestroy() {
+    this.searchTextSubscription.unsubscribe();
   }
 
 }

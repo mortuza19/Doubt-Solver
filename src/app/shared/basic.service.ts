@@ -32,6 +32,7 @@ export class BasicService {
 
   tagSelected: Subject<string> = new Subject<string>();
   newTopic: Subject<TopicModel> = new Subject<TopicModel>();
+  searchText: Subject<string> = new Subject<string>();
 
   topicList: TopicModel[] = [];
   

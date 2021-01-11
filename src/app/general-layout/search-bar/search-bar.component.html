@@ -3,9 +3,9 @@
     <span class="material-icons search-icon">
         search
     </span>
-    <mat-autocomplete #auto="matAutocomplete">
-        <mat-option *ngFor="let street of filteredStreets | async" [value]="street">
-            {{street}}
+    <mat-autocomplete (optionSelected)="optionSelected($event)" #auto="matAutocomplete">
+        <mat-option *ngFor="let subject of filteredSubject | async" [value]="subject">
+            {{subject}}
         </mat-option>
     </mat-autocomplete>
 </form>

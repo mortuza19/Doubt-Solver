@@ -16,6 +16,8 @@ export class TopicListsComponent implements OnInit, AfterViewInit, OnDestroy {
 
   categorySubscription: Subscription;
   topicSubscription: Subscription;
+  searchSubscription: Subscription;
+
   topicListStorage: TopicModel[] = [];
   topicLists: TopicModel[] = [];
   categorySelection: string;
@@ -34,7 +36,7 @@ export class TopicListsComponent implements OnInit, AfterViewInit, OnDestroy {
 
   ngAfterViewInit() {
     this.categorySubscription = this.basicService.tagSelected.subscribe(data => {
-      if (data) {
+      if (data && data !== 'All') {
         this.categorySelection = data;
         this.topicLists = this.topicListStorage.filter(topic => topic.categoryId === data);
       } else {
@@ -42,6 +44,7 @@ export class TopicListsComponent implements OnInit, AfterViewInit, OnDestroy {
         this.topicLists = [...this.topicListStorage];
       }
     });
+
     this.topicSubscription = this.basicService.newTopic.subscribe(data => {
       this.topicListStorage.unshift(data);
       if (!this.categorySelection) {
@@ -51,12 +54,21 @@ export class TopicListsComponent implements OnInit, AfterViewInit, OnDestroy {
           this.topicLists.unshift(data);
         }
       }
+    });
+
+    this.searchSubscription = this.basicService.searchText.subscribe(searchString => {
+      if (searchString) {
+        this.topicLists = this.topicListStorage.filter(data => data.subject === searchString);
+      } else {
+        this.topicLists = [...this.topicListStorage];
+      }
     })
   }
 
   ngOnDestroy() {
     this.categorySubscription.unsubscribe();
     this.topicSubscription.unsubscribe();
+    this.searchSubscription.unsubscribe();
   }
 
 }

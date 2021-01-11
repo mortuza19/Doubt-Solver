@@ -48,3 +48,7 @@ li:hover {
     border: 1px solid #eee;
     box-shadow: 2px 3px 5px #ccc;   
 }
+
+.create-topic-button {
+    margin-top: 20px;
+}
